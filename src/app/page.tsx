@@ -278,7 +278,7 @@ export default function VertothonHomePage() {
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-16">
               <span className="text-xs font-bold text-indigo-400 uppercase tracking-widest block mb-2">Got Questions?</span>
-              <h2 className="text-3xl sm:text-5xl font-black text-white uppercase tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-white uppercase tracking-tight">
                 Frequently Asked Questions
               </h2>
               <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-violet-500 mx-auto rounded-full mt-4 mb-6" />
