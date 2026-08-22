@@ -147,6 +147,16 @@ export default function TeamPage() {
       links: { linkedin: "chada-varshini", github: "chadavarshini", twitter: "chada_varshini" },
     },
     {
+      name: "SHAIK ASIF HUSSAIN",
+      role: "TECH TEAM",
+      initials: "SA",
+      image: "/team_asif.jpg",
+      color: "from-yellow-500 to-amber-600",
+      glow: "shadow-yellow-500/10 hover:border-zinc-800",
+      bio: "Structures documentation briefs, technical guides, and problem statements schedules.",
+      links: { linkedin: "asif-hussain-shaik", github: "asifhussain", twitter: "asif_hussain" },
+    },
+    {
       name: "VEDULA SAI SARANVI",
       role: "EVENT HOST",
       initials: "VS",
@@ -205,16 +215,6 @@ export default function TeamPage() {
       glow: "shadow-sky-500/10 hover:border-zinc-800",
       bio: "Configures static page optimization bundles and routing parameters boundaries.",
       links: { linkedin: "shiva-bakkathala", github: "shivab", twitter: "shiva_b" },
-    },
-    {
-      name: "SHAIK ASIF HUSSAIN",
-      role: "TECH TEAM",
-      initials: "SA",
-      image: "/team_asif.jpg",
-      color: "from-yellow-500 to-amber-600",
-      glow: "shadow-yellow-500/10 hover:border-zinc-800",
-      bio: "Structures documentation briefs, technical guides, and problem statements schedules.",
-      links: { linkedin: "asif-hussain-shaik", github: "asifhussain", twitter: "asif_hussain" },
     },
     {
       name: "HARSHA",
