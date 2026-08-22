@@ -90,36 +90,6 @@ export default function VertothonHomePage() {
     }
   ];
 
-  const prizes = [
-    {
-      rank: "2nd",
-      title: "1st Runner Up",
-      amount: "Cash & Swag Box",
-      perks: ["Runner-Up Trophy", "Exclusive Vertothon Merch", "Mentorship Access", "Certificate of Excellence"],
-      gradient: "from-zinc-400/20 to-zinc-600/10",
-      border: "border-zinc-700/60",
-      badge: "Silver Tier"
-    },
-    {
-      rank: "1st",
-      title: "Grand Champion",
-      amount: "Grand Prize & Trophy",
-      perks: ["Winner Trophy & Medals", "Premium Swag Kit", "Direct Investor / Partner Intro", "Winner Spotlight & Press Feature"],
-      gradient: "from-indigo-600/30 via-violet-600/20 to-amber-500/10",
-      border: "border-indigo-500",
-      badge: "Winner Champion",
-      featured: true
-    },
-    {
-      rank: "3rd",
-      title: "2nd Runner Up",
-      amount: "Cash & Goodies",
-      perks: ["Bronze Trophy", "Vertothon Swag Pack", "Partner Perks & Credits", "Certificate of Excellence"],
-      gradient: "from-amber-700/20 to-amber-900/10",
-      border: "border-amber-700/40",
-      badge: "Bronze Tier"
-    }
-  ];
 
   const faqs = [
     {
@@ -305,59 +275,6 @@ export default function VertothonHomePage() {
           </div>
         </section>
 
-        {/* ================= PRIZES SECTION ================= */}
-        <section id="prizes" className="py-24 px-4 sm:px-6 lg:px-8 border-b border-zinc-900 bg-zinc-950/40 relative">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center max-w-2xl mx-auto mb-16">
-              <span className="text-xs font-bold text-amber-400 uppercase tracking-widest block mb-2">Rewards & Recognition</span>
-              <h2 className="text-3xl sm:text-5xl font-black text-white uppercase tracking-tight">
-                Prizes & Perks
-              </h2>
-              <div className="w-16 h-1 bg-gradient-to-r from-amber-500 to-rose-500 mx-auto rounded-full mt-4 mb-6" />
-              <p className="text-zinc-400 text-sm">
-                Compete for grand prizes, sponsored track bounties, exclusive swags, and developer certifications.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-              {prizes.map((p, i) => (
-                <div
-                  key={i}
-                  className={`rounded-3xl p-8 bg-gradient-to-b ${p.gradient} bg-zinc-950/90 border ${p.border} flex flex-col items-center text-center relative overflow-hidden transition-all duration-300 hover:scale-105 shadow-2xl ${
-                    p.featured ? "md:-translate-y-4 md:py-12 border-2" : ""
-                  }`}
-                >
-                  <div className="px-3 py-1 rounded-full bg-zinc-900/90 border border-zinc-800 text-[10px] font-bold uppercase tracking-widest text-zinc-300 mb-6">
-                    {p.badge}
-                  </div>
-
-                  <div className="w-16 h-16 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center mb-4 text-2xl font-black text-white shadow-inner">
-                    {p.rank}
-                  </div>
-
-                  <h3 className="text-xl font-bold text-white uppercase tracking-wide mb-1">
-                    {p.title}
-                  </h3>
-
-                  <div className="text-sm font-semibold text-indigo-400 mb-6">
-                    {p.amount}
-                  </div>
-
-                  <div className="w-full h-[1px] bg-zinc-900 mb-6" />
-
-                  <ul className="w-full space-y-3 text-left mb-6 text-xs text-zinc-300">
-                    {p.perks.map((perk, j) => (
-                      <li key={j} className="flex items-center gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                        <span>{perk}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* ================= COMMUNITY COUNCIL & TEAM ================= */}
         <section id="team" className="py-24 px-4 sm:px-6 lg:px-8 border-b border-zinc-900 relative">
