@@ -97,6 +97,16 @@ export default function TeamPage() {
       links: { linkedin: "varshith-tech", github: "varshith", twitter: "varshith_tech" },
     },
     {
+      name: "MARADANA VAMSI MOHAN",
+      role: "OPERATIONS LEAD",
+      initials: "MV",
+      image: "/team_vamsi_mohan.jpg",
+      color: "from-pink-500 to-indigo-500",
+      glow: "shadow-pink-500/10 hover:border-zinc-800",
+      bio: "Coordinates community communications, social announcements, and press media updates.",
+      links: { linkedin: "vamsi-mohan-maradana", github: "vamsimohan", twitter: "vamsi_mohan" },
+    },
+    {
       name: "MOHAMMAD AYAZ AHMED",
       role: "TECH TEAM",
       initials: "MA",
@@ -185,16 +195,6 @@ export default function TeamPage() {
       glow: "shadow-yellow-500/10 hover:border-zinc-800",
       bio: "Structures documentation briefs, technical guides, and problem statements schedules.",
       links: { linkedin: "asif-hussain-shaik", github: "asifhussain", twitter: "asif_hussain" },
-    },
-    {
-      name: "MARADANA VAMSI MOHAN",
-      role: "OPERATIONS LEAD",
-      initials: "MV",
-      image: "/team_vamsi_mohan.jpg",
-      color: "from-pink-500 to-indigo-500",
-      glow: "shadow-pink-500/10 hover:border-zinc-800",
-      bio: "Coordinates community communications, social announcements, and press media updates.",
-      links: { linkedin: "vamsi-mohan-maradana", github: "vamsimohan", twitter: "vamsi_mohan" },
     },
     {
       name: "HARSHA",
