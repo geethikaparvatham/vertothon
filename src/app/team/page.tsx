@@ -65,7 +65,7 @@ export default function TeamPage() {
       links: {
         linkedin: "https://www.linkedin.com/in/geethika-parvatham-a6a96b372",
         github: "https://github.com/geethikaparvatham",
-        instagram: "https://www.instagram.com/geethika_parvatham"
+        instagram: "https://www.instagram.com/geethika_parvatham_838?utm_source=qr&igsi=dW45ZzVobzZxc2k4"
       },
     },
     {
