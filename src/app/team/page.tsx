@@ -439,7 +439,7 @@ export default function TeamPage() {
         </div>
 
         {/* Council Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.slice(1).map((member, idx) => {
             const linkedinUrl = formatLink(member.links.linkedin, "https://linkedin.com/in/");
             const githubUrl = formatLink(member.links.github, "https://github.com/");
