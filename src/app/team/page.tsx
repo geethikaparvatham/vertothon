@@ -88,7 +88,7 @@ export default function TeamPage() {
     },
     {
       name: "CHADA VARSHINI",
-      role: "EVENT TEAM",
+      role: "TECH TEAM",
       initials: "CV",
       image: "/team_varshini.jpg",
       color: "from-purple-500 to-pink-500",
