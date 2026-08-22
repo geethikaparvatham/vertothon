@@ -17,64 +17,15 @@ export default function EventsDiscoveryPage() {
       <main className="flex-grow py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center relative z-10">
         <div className="w-full max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-center gap-12 lg:gap-20">
           
-          {/* Left Side: Flyer Card */}
-          <div className="w-full max-w-xs flex flex-col items-center flex-shrink-0">
-            {/* Main Flyer Card */}
-            <div className="w-full bg-gradient-to-b from-white to-zinc-100 text-zinc-950 rounded-3xl px-6 py-4 shadow-2xl border border-zinc-200 relative overflow-hidden flex flex-col items-center text-center">
-              {/* Tech Grid Trace Overlays */}
-              <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:16px_16px]" />
-              <div className="absolute -top-40 -right-40 h-80 w-80 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
-              
-              {/* Logo at the top */}
-              <Logo showText={true} showTagline={false} size={40} lightTheme={true} className="flex-col mb-3" />
-
-              {/* Separator code tag */}
-              <div className="relative z-10 text-zinc-400 font-mono text-xs tracking-wider mb-3 flex items-center gap-2">
-                <span className="h-[1px] w-8 bg-zinc-300" />
-                <span>&lt;/&gt;</span>
-                <span className="h-[1px] w-8 bg-zinc-300" />
-              </div>
-
-              {/* VERTOTHON */}
-              <div className="relative z-10 mb-1">
-                <h2 className="text-4xl sm:text-5xl font-black tracking-tight leading-none uppercase font-sans">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-indigo-950">VERTO</span>
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-orange-600 to-rose-600">THON</span>
-                </h2>
-              </div>
-
-              {/* Tagline */}
-              <p className="relative z-10 text-[10px] sm:text-xs font-bold uppercase tracking-[0.3em] text-zinc-600 mb-4 flex items-center justify-center gap-2 w-full">
-                <span>CODE</span>
-                <span className="text-rose-500 font-black">•</span>
-                <span>INNOVATE</span>
-                <span className="text-indigo-500 font-black">•</span>
-                <span>IMPACT</span>
-              </p>
-
-              {/* COMING SOON BANNER */}
-              <div className="relative z-10 w-full mb-4">
-                <div className="bg-zinc-950 text-white py-2 px-6 rounded-xl font-black text-xl sm:text-2xl uppercase tracking-widest shadow-lg inline-block border-l-4 border-r-4 border-indigo-500 transform -rotate-1 skew-x-3 select-none">
-                  COMING SOON
-                </div>
-              </div>
-
-              {/* STAY TUNED */}
-              <div className="relative z-10 mb-3">
-                <p className="text-[10px] sm:text-xs font-bold tracking-widest text-zinc-500 uppercase">For More Details</p>
-                <div className="flex items-center justify-center gap-3 mt-1">
-                  <span className="h-[1px] w-6 bg-blue-500" />
-                  <h3 className="text-base sm:text-lg font-black tracking-widest text-zinc-900 uppercase">Stay Tuned!</h3>
-                  <span className="h-[1px] w-6 bg-orange-500" />
-                </div>
-              </div>
-
-              {/* Bottom code tag */}
-              <div className="relative z-10 font-mono text-base font-bold mb-2 flex items-center justify-center">
-                <span className="text-blue-500">&lt;</span>
-                <span className="text-orange-500">/</span>
-                <span className="text-rose-500">&gt;</span>
-              </div>
+          {/* Left Side: Official Vertothon Poster */}
+          <div className="w-full max-w-sm sm:max-w-md flex flex-col items-center flex-shrink-0 group">
+            {/* Poster Frame */}
+            <div className="w-full rounded-3xl p-2 bg-gradient-to-b from-indigo-500/30 via-zinc-800 to-zinc-900 shadow-2xl shadow-indigo-500/20 border border-indigo-500/30 overflow-hidden group-hover:scale-[1.02] transition-all duration-300">
+              <img
+                src="/vertothon_poster.jpg"
+                alt="Vertothon Official Hackathon Poster"
+                className="w-full h-auto object-cover rounded-2xl shadow-inner"
+              />
             </div>
 
             {/* Registrations are opening soon message banner underneath */}
