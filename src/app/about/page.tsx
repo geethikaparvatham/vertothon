@@ -22,7 +22,7 @@ export default function AboutPage() {
         {/* Hero title */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs font-bold text-indigo-400 uppercase tracking-widest block mb-2">About Vertothon</span>
-          <h1 className="text-4xl sm:text-6xl font-black text-white uppercase tracking-tight">
+          <h1 className="text-2xl sm:text-4xl font-extrabold text-white uppercase tracking-tight">
             More than a community.<br />
             <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               A Platform For Builders.
