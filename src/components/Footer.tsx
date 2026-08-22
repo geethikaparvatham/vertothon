@@ -64,7 +64,7 @@ export default function Footer() {
               </a>
             </div>
             <p className="text-xs text-zinc-500">
-              Contact us at <span className="text-zinc-400">hello@vertofi.com</span>
+              Contact us at <span className="text-zinc-400">hello@vertothon.com</span>
             </p>
           </div>
         </div>
@@ -73,9 +73,9 @@ export default function Footer() {
 
         {/* Copy note */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
-          <span>&copy; {new Date().getFullYear()} Vertofi Technology Community. All rights reserved.</span>
+          <span>&copy; {new Date().getFullYear()} Vertothon. All rights reserved.</span>
           <span className="flex items-center gap-1">
-            Made with <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" /> by Vertofi Builders
+            Made with <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" /> by Vertothon Team
           </span>
         </div>
       </div>

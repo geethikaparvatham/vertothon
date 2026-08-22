@@ -21,7 +21,7 @@ export default function AboutPage() {
       <main className="flex-grow py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full">
         {/* Hero title */}
         <div className="text-center mb-16">
-          <span className="text-xs font-bold text-indigo-400 uppercase tracking-widest">About Vertofi</span>
+          <span className="text-xs font-bold text-indigo-400 uppercase tracking-widest">About Vertothon</span>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white mt-3 uppercase tracking-tight">
             More than a community.<br />A platform for builders.
           </h1>
@@ -59,9 +59,9 @@ export default function AboutPage() {
               Leadership
             </span>
             <h2 className="text-2xl font-bold text-white uppercase tracking-wider">Goutham Badiga</h2>
-            <span className="text-xs text-zinc-500 font-medium block mt-0.5">Founder & CEO, Vertofi</span>
+            <span className="text-xs text-zinc-500 font-medium block mt-0.5">Founder & CEO, Vertothon</span>
             <p className="text-xs sm:text-sm text-zinc-400 mt-4 leading-relaxed">
-              Vertofi is an AI-powered Predictive Financial Intelligence Platform founded by Goutham Badiga, built to help businesses automate accounting, predict financial and tax risks, detect profit leakage, monitor financial health, and make smarter, data-driven decisions.
+              Vertothon is a technology-driven Predictive Financial Intelligence Platform founded by Goutham Badiga, built to help businesses automate accounting, predict financial and tax risks, detect profit leakage, monitor financial health, and make smarter, data-driven decisions.
             </p>
             
             {/* Social Links */}

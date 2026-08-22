@@ -243,7 +243,7 @@ export default function TeamPage() {
         <div className="text-center mb-16 flex flex-col items-center">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-[10px] font-bold tracking-wider uppercase mb-4">
             <Sparkles className="w-3 h-3" />
-            VERTOFI COUNCIL
+            VERTOTHON COUNCIL
           </span>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white uppercase tracking-tight leading-none">
             Meet Our Core Team

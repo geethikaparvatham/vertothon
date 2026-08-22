@@ -41,7 +41,7 @@ export default function ContactPage() {
         <div className="text-center mb-16">
           <span className="text-xs font-bold text-indigo-400 uppercase tracking-widest">Connect with Us</span>
           <h1 className="text-4xl font-extrabold text-white mt-2 uppercase tracking-tight">
-            Contact Vertofi Community
+            Contact Vertothon Community
           </h1>
           <div className="h-1 w-20 bg-indigo-600 mx-auto mt-6 rounded-full" />
         </div>

@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vertofi | Build. Connect. Create. Impact.",
-  description: "Vertofi is a technology-driven community empowering students, developers, creators, and innovators through hackathons, workshops, meetups, bootcamps, and real-world opportunities.",
+  title: "Vertothon | Build. Connect. Create. Impact.",
+  description: "Vertothon is a technology-driven community empowering students, developers, creators, and innovators through hackathons, workshops, meetups, bootcamps, and real-world opportunities.",
 };
 
 export default function RootLayout({

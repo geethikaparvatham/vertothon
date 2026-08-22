@@ -21,7 +21,7 @@ export default function CommunityPage() {
       <main className="flex-grow py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full">
         {/* Title */}
         <div className="text-center mb-16">
-          <span className="text-xs font-bold text-indigo-400 uppercase tracking-widest">Vertofi Ecosystem</span>
+          <span className="text-xs font-bold text-indigo-400 uppercase tracking-widest">Vertothon Ecosystem</span>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white mt-3 uppercase tracking-tight">
             The Hub for Creators & Tech Enthusiasts
           </h1>
@@ -58,7 +58,7 @@ export default function CommunityPage() {
 
         {/* Join CTA */}
         <div className="p-12 rounded-3xl bg-radial-gradient-glow border border-indigo-500/10 text-center flex flex-col items-center">
-          <h2 className="text-2xl font-bold text-white mb-2 uppercase tracking-wide">Join the Vertofi Community</h2>
+          <h2 className="text-2xl font-bold text-white mb-2 uppercase tracking-wide">Join the Vertothon Community</h2>
           <p className="text-sm text-zinc-400 max-w-md mb-6 leading-relaxed">
             Create your profile now to join projects, connect with mentors, RSVP for offline meetups, and validate your certifications.
           </p>

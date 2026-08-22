@@ -104,7 +104,7 @@ export default function HomePage() {
           </h1>
 
           <p className="text-lg sm:text-xl text-zinc-400 mb-10 max-w-2xl leading-relaxed">
-            Vertofi is a technology-driven community empowering students, developers, creators, and innovators through high-fidelity hackathons, workshops, bootcamps, and real-world opportunities.
+            Vertothon is a technology-driven community empowering students, developers, creators, and innovators through high-fidelity hackathons, workshops, bootcamps, and real-world opportunities.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md">
@@ -123,7 +123,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 px-8 py-3.5 text-sm font-semibold rounded-xl bg-zinc-900 text-white border border-zinc-800 hover:bg-zinc-800 transition-all hover:scale-105 active:scale-95 duration-200"
             >
-              JOIN VERTOFI COMMUNITY
+              JOIN VERTOTHON COMMUNITY
             </Link>
           </div>
         </div>
@@ -166,7 +166,7 @@ export default function HomePage() {
               </h3>
             </div>
             <p className="text-sm text-zinc-400 leading-relaxed lg:border-l lg:border-zinc-800 lg:pl-6">
-              Vertofi constructs ecosystems designed for developer acceleration. We curate high-stakes hacking sprints, intensive workshops, and local meetups that bridge academic curiosities with industry deliverables.
+              Vertothon constructs ecosystems designed for developer acceleration. We curate high-stakes hacking sprints, intensive workshops, and local meetups that bridge academic curiosities with industry deliverables.
             </p>
           </div>
 
@@ -193,7 +193,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-3">
-              THE VERTOFI FORGE
+              THE VERTOTHON FORGE
             </h2>
             <h3 className="text-3xl font-extrabold text-white uppercase tracking-tight">
               Community Builds & Projects
