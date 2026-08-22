@@ -34,77 +34,67 @@ export default function AboutPage() {
           </p>
         </div>
 
-        {/* Mission / Vision split - ATTRACTIVE HIGH-TECH CARDS */}
+        {/* Mission / Vision split - CLEAN SOLID DARK CARDS */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           {/* OUR MISSION CARD */}
-          <div className="group relative rounded-3xl p-[1px] bg-gradient-to-b from-indigo-500/40 via-indigo-500/10 to-transparent shadow-xl hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-300">
-            <div className="h-full w-full rounded-3xl bg-zinc-950/80 backdrop-blur-xl p-8 sm:p-10 relative overflow-hidden flex flex-col justify-between">
-              {/* Top ambient glow blob */}
-              <div className="absolute -top-20 -left-20 w-48 h-48 bg-indigo-500/15 rounded-full blur-3xl group-hover:bg-indigo-500/25 transition-colors duration-500 pointer-events-none" />
-
-              <div>
-                {/* Header Icon + Label */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="p-3.5 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 shadow-[0_0_20px_rgba(99,102,241,0.2)]">
-                    <Target className="w-6 h-6" />
-                  </div>
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-indigo-400 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20">
-                    Core Purpose
-                  </span>
+          <div className="group relative rounded-3xl p-8 sm:p-10 bg-zinc-950/80 border border-zinc-800 hover:border-zinc-700 shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div>
+              {/* Header Icon + Label */}
+              <div className="flex items-center justify-between mb-6">
+                <div className="p-3.5 rounded-2xl bg-zinc-900 border border-zinc-800 text-zinc-300">
+                  <Target className="w-6 h-6" />
                 </div>
-
-                <h2 className="text-2xl font-black text-white uppercase tracking-wider mb-4 flex items-center gap-2">
-                  <span>Our Mission</span>
-                </h2>
-
-                <p className="text-sm sm:text-base text-zinc-300 leading-relaxed font-light">
-                  To construct a frictionless operations operating system for technology learning and execution. We organize meetups, coding cohorts, and multi-track hackathons that connect curious minds with deployable industry expertise.
-                </p>
-              </div>
-
-              {/* Bottom decorative bar */}
-              <div className="mt-8 pt-6 border-t border-zinc-900/80 flex items-center justify-between text-xs text-zinc-500">
-                <span className="flex items-center gap-2 text-indigo-400 font-medium">
-                  <Sparkles className="w-3.5 h-3.5" /> Action Driven
+                <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-400 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800">
+                  Core Purpose
                 </span>
-                <span className="font-mono text-[10px] text-zinc-600 uppercase tracking-widest">Vertothon Protocol</span>
               </div>
+
+              <h2 className="text-2xl font-bold text-white uppercase tracking-wider mb-4">
+                Our Mission
+              </h2>
+
+              <p className="text-sm sm:text-base text-zinc-300 leading-relaxed font-light">
+                To construct a frictionless operations operating system for technology learning and execution. We organize meetups, coding cohorts, and multi-track hackathons that connect curious minds with deployable industry expertise.
+              </p>
+            </div>
+
+            {/* Bottom decorative bar */}
+            <div className="mt-8 pt-6 border-t border-zinc-900 flex items-center justify-between text-xs text-zinc-500">
+              <span className="flex items-center gap-2 text-zinc-400 font-medium">
+                <Sparkles className="w-3.5 h-3.5" /> Action Driven
+              </span>
+              <span className="font-mono text-[10px] text-zinc-600 uppercase tracking-widest">Vertothon Protocol</span>
             </div>
           </div>
 
           {/* OUR VISION CARD */}
-          <div className="group relative rounded-3xl p-[1px] bg-gradient-to-b from-purple-500/40 via-purple-500/10 to-transparent shadow-xl hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300">
-            <div className="h-full w-full rounded-3xl bg-zinc-950/80 backdrop-blur-xl p-8 sm:p-10 relative overflow-hidden flex flex-col justify-between">
-              {/* Top ambient glow blob */}
-              <div className="absolute -top-20 -right-20 w-48 h-48 bg-purple-500/15 rounded-full blur-3xl group-hover:bg-purple-500/25 transition-colors duration-500 pointer-events-none" />
-
-              <div>
-                {/* Header Icon + Label */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="p-3.5 rounded-2xl bg-purple-500/10 border border-purple-500/30 text-purple-400 shadow-[0_0_20px_rgba(168,85,247,0.2)]">
-                    <Eye className="w-6 h-6" />
-                  </div>
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-purple-400 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20">
-                    Future Horizon
-                  </span>
+          <div className="group relative rounded-3xl p-8 sm:p-10 bg-zinc-950/80 border border-zinc-800 hover:border-zinc-700 shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div>
+              {/* Header Icon + Label */}
+              <div className="flex items-center justify-between mb-6">
+                <div className="p-3.5 rounded-2xl bg-zinc-900 border border-zinc-800 text-zinc-300">
+                  <Eye className="w-6 h-6" />
                 </div>
-
-                <h2 className="text-2xl font-black text-white uppercase tracking-wider mb-4 flex items-center gap-2">
-                  <span>Our Vision</span>
-                </h2>
-
-                <p className="text-sm sm:text-base text-zinc-300 leading-relaxed font-light">
-                  To seed a decentralized network of active builder chapters. We see a future where tech enthusiasts, regardless of institutional pedigree, can gather, form cohorts, deploy software, and resolve socio-technical hurdles.
-                </p>
-              </div>
-
-              {/* Bottom decorative bar */}
-              <div className="mt-8 pt-6 border-t border-zinc-900/80 flex items-center justify-between text-xs text-zinc-500">
-                <span className="flex items-center gap-2 text-purple-400 font-medium">
-                  <Award className="w-3.5 h-3.5" /> Long-Term Impact
+                <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-400 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800">
+                  Future Horizon
                 </span>
-                <span className="font-mono text-[10px] text-zinc-600 uppercase tracking-widest">Global Ecosystem</span>
               </div>
+
+              <h2 className="text-2xl font-bold text-white uppercase tracking-wider mb-4">
+                Our Vision
+              </h2>
+
+              <p className="text-sm sm:text-base text-zinc-300 leading-relaxed font-light">
+                To seed a decentralized network of active builder chapters. We see a future where tech enthusiasts, regardless of institutional pedigree, can gather, form cohorts, deploy software, and resolve socio-technical hurdles.
+              </p>
+            </div>
+
+            {/* Bottom decorative bar */}
+            <div className="mt-8 pt-6 border-t border-zinc-900 flex items-center justify-between text-xs text-zinc-500">
+              <span className="flex items-center gap-2 text-zinc-400 font-medium">
+                <Award className="w-3.5 h-3.5" /> Long-Term Impact
+              </span>
+              <span className="font-mono text-[10px] text-zinc-600 uppercase tracking-widest">Global Ecosystem</span>
             </div>
           </div>
         </div>
