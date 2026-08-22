@@ -2,29 +2,18 @@
 
 import React, { useEffect, useRef } from "react";
 
-interface Node {
-  x: number;
-  y: number;
-  vx: number;
-  vy: number;
-  baseRadius: number;
-  color: string;
-  pulsePhase: number;
-}
-
 interface Particle {
   x: number;
   y: number;
   vx: number;
   vy: number;
-  life: number;
-  maxLife: number;
-  color: string;
+  radius: number;
+  baseAlpha: number;
 }
 
 export default function NetworkBackground() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const mouseRef = useRef({ x: -1000, y: -1000, active: false, radius: 220 });
+  const mouseRef = useRef({ x: -1000, y: -1000, active: false });
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -37,29 +26,18 @@ export default function NetworkBackground() {
     let width = (canvas.width = window.innerWidth);
     let height = (canvas.height = window.innerHeight);
 
-    // Dynamic node count with high density
-    const nodeCount = Math.min(100, Math.floor((width * height) / 16000));
-    const nodes: Node[] = [];
+    // Controlled particle count for a clean, minimal look
+    const count = Math.min(65, Math.floor((width * height) / 28000));
     const particles: Particle[] = [];
 
-    const colors = [
-      "rgba(99, 102, 241,", // Indigo
-      "rgba(168, 85, 247,", // Purple
-      "rgba(59, 130, 246,", // Blue
-      "rgba(236, 72, 153,", // Pink
-      "rgba(20, 184, 166,", // Teal
-    ];
-
-    // Create initial nodes
-    for (let i = 0; i < nodeCount; i++) {
-      nodes.push({
+    for (let i = 0; i < count; i++) {
+      particles.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.7,
-        vy: (Math.random() - 0.5) * 0.7,
-        baseRadius: Math.random() * 2 + 1.5,
-        color: colors[Math.floor(Math.random() * colors.length)],
-        pulsePhase: Math.random() * Math.PI * 2,
+        vx: (Math.random() - 0.5) * 0.35,
+        vy: (Math.random() - 0.5) * 0.35,
+        radius: Math.random() * 1.5 + 1.2,
+        baseAlpha: Math.random() * 0.4 + 0.3,
       });
     }
 
@@ -74,19 +52,6 @@ export default function NetworkBackground() {
       mouseRef.current.x = e.clientX - rect.left;
       mouseRef.current.y = e.clientY - rect.top;
       mouseRef.current.active = true;
-
-      // Spawn energetic trail particles when cursor moves
-      if (Math.random() > 0.4) {
-        particles.push({
-          x: mouseRef.current.x,
-          y: mouseRef.current.y,
-          vx: (Math.random() - 0.5) * 1.5,
-          vy: (Math.random() - 0.5) * 1.5,
-          life: 0,
-          maxLife: 30 + Math.random() * 20,
-          color: colors[Math.floor(Math.random() * colors.length)],
-        });
-      }
     };
 
     const handleMouseLeave = () => {
@@ -99,155 +64,130 @@ export default function NetworkBackground() {
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("mouseleave", handleMouseLeave);
 
-    let time = 0;
+    // Subtle floating ambient aura positions
+    let auraAngle = 0;
 
-    // Render loop
     const render = () => {
-      time += 0.02;
+      auraAngle += 0.003;
       ctx.clearRect(0, 0, width, height);
 
-      // 1. Subtle glowing cyber grid
-      ctx.lineWidth = 1;
-      const gridSize = 45;
-      for (let x = 0; x < width; x += gridSize) {
-        ctx.strokeStyle = "rgba(255, 255, 255, 0.02)";
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, height);
-        ctx.stroke();
-      }
-      for (let y = 0; y < height; y += gridSize) {
-        ctx.strokeStyle = "rgba(255, 255, 255, 0.02)";
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(width, y);
-        ctx.stroke();
+      // 1. Sleek Minimal Grid (Subtle dot lattice / grid)
+      const dotSpacing = 40;
+      ctx.fillStyle = "rgba(255, 255, 255, 0.035)";
+      for (let x = 0; x < width; x += dotSpacing) {
+        for (let y = 0; y < height; y += dotSpacing) {
+          ctx.beginPath();
+          ctx.arc(x, y, 0.75, 0, Math.PI * 2);
+          ctx.fill();
+        }
       }
 
-      // 2. Cursor Interactive Glow Spotlight
+      // 2. Deep Ambient Atmospheric Glows (Modern SaaS / Vercel style)
+      const aura1X = width * 0.35 + Math.cos(auraAngle) * 80;
+      const aura1Y = height * 0.3 + Math.sin(auraAngle) * 60;
+      const grad1 = ctx.createRadialGradient(aura1X, aura1Y, 0, aura1X, aura1Y, Math.min(width, height) * 0.5);
+      grad1.addColorStop(0, "rgba(99, 102, 241, 0.07)");
+      grad1.addColorStop(0.5, "rgba(79, 70, 229, 0.03)");
+      grad1.addColorStop(1, "rgba(0, 0, 0, 0)");
+      ctx.fillStyle = grad1;
+      ctx.fillRect(0, 0, width, height);
+
+      const aura2X = width * 0.65 - Math.sin(auraAngle * 0.8) * 80;
+      const aura2Y = height * 0.45 + Math.cos(auraAngle * 0.8) * 60;
+      const grad2 = ctx.createRadialGradient(aura2X, aura2Y, 0, aura2X, aura2Y, Math.min(width, height) * 0.45);
+      grad2.addColorStop(0, "rgba(147, 51, 234, 0.05)");
+      grad2.addColorStop(0.5, "rgba(99, 102, 241, 0.02)");
+      grad2.addColorStop(1, "rgba(0, 0, 0, 0)");
+      ctx.fillStyle = grad2;
+      ctx.fillRect(0, 0, width, height);
+
+      // 3. Subtle Interactive Cursor Illumination Spotlight
       if (mouseRef.current.active) {
-        const mouseGlow = ctx.createRadialGradient(
+        const spotlight = ctx.createRadialGradient(
           mouseRef.current.x,
           mouseRef.current.y,
           0,
           mouseRef.current.x,
           mouseRef.current.y,
-          mouseRef.current.radius
+          260
         );
-        mouseGlow.addColorStop(0, "rgba(99, 102, 241, 0.18)");
-        mouseGlow.addColorStop(0.5, "rgba(168, 85, 247, 0.08)");
-        mouseGlow.addColorStop(1, "rgba(0, 0, 0, 0)");
-
-        ctx.fillStyle = mouseGlow;
+        spotlight.addColorStop(0, "rgba(99, 102, 241, 0.12)");
+        spotlight.addColorStop(0.5, "rgba(139, 92, 246, 0.04)");
+        spotlight.addColorStop(1, "rgba(0, 0, 0, 0)");
+        ctx.fillStyle = spotlight;
         ctx.beginPath();
-        ctx.arc(
-          mouseRef.current.x,
-          mouseRef.current.y,
-          mouseRef.current.radius,
-          0,
-          Math.PI * 2
-        );
+        ctx.arc(mouseRef.current.x, mouseRef.current.y, 260, 0, Math.PI * 2);
         ctx.fill();
       }
 
-      // 3. Render connection web between nodes
-      const maxDist = 140;
-      for (let i = 0; i < nodes.length; i++) {
-        for (let j = i + 1; j < nodes.length; j++) {
-          const dx = nodes[i].x - nodes[j].x;
-          const dy = nodes[i].y - nodes[j].y;
+      // 4. Elegant Geometric Constellation Lines
+      const maxDist = 130;
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
 
           if (dist < maxDist) {
-            const alpha = (1 - dist / maxDist) * 0.35;
-            ctx.strokeStyle = `rgba(129, 140, 248, ${alpha})`;
-            ctx.lineWidth = 1 - dist / maxDist;
+            const alpha = (1 - dist / maxDist) * 0.22;
+            ctx.strokeStyle = `rgba(165, 180, 252, ${alpha})`;
+            ctx.lineWidth = 0.75;
             ctx.beginPath();
-            ctx.moveTo(nodes[i].x, nodes[i].y);
-            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
             ctx.stroke();
           }
         }
 
-        // Connect nodes to mouse with magnetic interaction
+        // Refined interactive line to cursor
         if (mouseRef.current.active) {
-          const mdx = nodes[i].x - mouseRef.current.x;
-          const mdy = nodes[i].y - mouseRef.current.y;
+          const mdx = particles[i].x - mouseRef.current.x;
+          const mdy = particles[i].y - mouseRef.current.y;
           const mDist = Math.sqrt(mdx * mdx + mdy * mdy);
+          const mouseMaxDist = 180;
 
-          if (mDist < mouseRef.current.radius) {
-            const mAlpha = (1 - mDist / mouseRef.current.radius) * 0.65;
-            ctx.strokeStyle = `rgba(216, 180, 254, ${mAlpha})`;
-            ctx.lineWidth = (1 - mDist / mouseRef.current.radius) * 1.5;
+          if (mDist < mouseMaxDist) {
+            const mAlpha = (1 - mDist / mouseMaxDist) * 0.35;
+            ctx.strokeStyle = `rgba(199, 210, 254, ${mAlpha})`;
+            ctx.lineWidth = 0.9;
             ctx.beginPath();
-            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(mouseRef.current.x, mouseRef.current.y);
             ctx.stroke();
 
-            // Slight magnetic pull toward cursor
-            const force = (1 - mDist / mouseRef.current.radius) * 0.4;
-            nodes[i].x -= (mdx / mDist) * force;
-            nodes[i].y -= (mdy / mDist) * force;
+            // Gentle, smooth micro-displacement
+            const force = (1 - mDist / mouseMaxDist) * 0.2;
+            particles[i].x -= (mdx / mDist) * force;
+            particles[i].y -= (mdy / mDist) * force;
           }
         }
       }
 
-      // 4. Draw cursor trail particles
-      for (let p = particles.length - 1; p >= 0; p--) {
-        const particle = particles[p];
-        particle.life++;
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+      // 5. Clean, Minimalist Particle Nodes
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
 
-        const progress = particle.life / particle.maxLife;
-        if (progress >= 1) {
-          particles.splice(p, 1);
-          continue;
-        }
-
-        const pAlpha = (1 - progress) * 0.6;
-        ctx.fillStyle = `${particle.color}${pAlpha})`;
+        // Soft halo
+        ctx.fillStyle = `rgba(165, 180, 252, ${p.baseAlpha * 0.15})`;
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, 2 * (1 - progress), 0, Math.PI * 2);
-        ctx.fill();
-      }
-
-      // 5. Draw glowing nodes
-      for (let i = 0; i < nodes.length; i++) {
-        const node = nodes[i];
-        const pulse = Math.sin(time * 2 + node.pulsePhase) * 0.8 + 1;
-        const currentRadius = node.baseRadius * pulse;
-
-        // Outer glow
-        const glowGradient = ctx.createRadialGradient(
-          node.x,
-          node.y,
-          0,
-          node.x,
-          node.y,
-          currentRadius * 4
-        );
-        glowGradient.addColorStop(0, `${node.color}0.6)`);
-        glowGradient.addColorStop(1, `${node.color}0)`);
-
-        ctx.fillStyle = glowGradient;
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, currentRadius * 4, 0, Math.PI * 2);
+        ctx.arc(p.x, p.y, p.radius * 2.5, 0, Math.PI * 2);
         ctx.fill();
 
-        // Node core
-        ctx.fillStyle = `${node.color}0.9)`;
+        // Sharp core dot
+        ctx.fillStyle = `rgba(224, 231, 255, ${p.baseAlpha})`;
         ctx.beginPath();
-        ctx.arc(node.x, node.y, currentRadius, 0, Math.PI * 2);
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fill();
 
-        // Move nodes with gentle physics
-        node.x += node.vx;
-        node.y += node.vy;
+        // Smooth drift
+        p.x += p.vx;
+        p.y += p.vy;
 
-        // Soft bounce boundaries
-        if (node.x < 0 || node.x > width) node.vx *= -1;
-        if (node.y < 0 || node.y > height) node.vy *= -1;
+        // Wrap around edges seamlessly
+        if (p.x < 0) p.x = width;
+        if (p.x > width) p.x = 0;
+        if (p.y < 0) p.y = height;
+        if (p.y > height) p.y = 0;
       }
 
       animationFrameId = requestAnimationFrame(render);
