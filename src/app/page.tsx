@@ -359,23 +359,131 @@ export default function VertothonHomePage() {
           </div>
         </section>
 
-        {/* ================= TEAM SPOTLIGHT ================= */}
+        {/* ================= COMMUNITY COUNCIL & TEAM ================= */}
         <section id="team" className="py-24 px-4 sm:px-6 lg:px-8 border-b border-zinc-900 relative">
-          <div className="max-w-5xl mx-auto text-center">
-            <span className="text-xs font-bold text-indigo-400 uppercase tracking-widest block mb-2">The Organizers</span>
+          <div className="max-w-6xl mx-auto text-center">
+            <span className="text-xs font-bold text-indigo-400 uppercase tracking-widest block mb-2">Community Council</span>
             <h2 className="text-3xl sm:text-5xl font-black text-white uppercase tracking-tight mb-4">
               Meet The Vertothon Team
             </h2>
             <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-violet-500 mx-auto rounded-full mb-6" />
-            <p className="text-zinc-400 text-sm max-w-xl mx-auto mb-10 leading-relaxed">
-              Organized by passionate student leads, technical architects, and community organizers dedicated to empowering young builders.
+            <p className="text-zinc-400 text-sm max-w-xl mx-auto mb-12 leading-relaxed">
+              Organized by passionate student leads, technical architects, and community volunteers dedicated to empowering the next generation of builders.
             </p>
+
+            {/* Featured Leads Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              {[
+                {
+                  name: "ISSAKU TAGARAMPUDI",
+                  role: "TEAM LEAD",
+                  image: "/issaku.jpg",
+                  initials: "IT",
+                  color: "from-blue-500 via-indigo-500 to-violet-600",
+                  linkedin: "issaku-tagarampudi"
+                },
+                {
+                  name: "MUTHINA ABHILASH",
+                  role: "TEAM CO-LEAD",
+                  image: "/team_abhilash.jpg",
+                  initials: "MA",
+                  color: "from-blue-400 to-indigo-600",
+                  linkedin: "muthina-abhilash"
+                },
+                {
+                  name: "PARVATHAM GEETHIKA",
+                  role: "TECH LEAD",
+                  image: "/team_geethika.jpg",
+                  initials: "PG",
+                  color: "from-pink-500 to-rose-600",
+                  linkedin: "geethika-parvatham"
+                },
+                {
+                  name: "VARSHITH",
+                  role: "OPERATIONS LEAD",
+                  image: "/team_varshith.jpg",
+                  initials: "V",
+                  color: "from-teal-500 to-emerald-600",
+                  linkedin: "varshith-tech"
+                },
+                {
+                  name: "KATTA CHARAN RAJ",
+                  role: "CONTENT LEAD",
+                  image: "/team_charan.jpg",
+                  initials: "KC",
+                  color: "from-red-500 to-orange-600",
+                  linkedin: "charan-raj-katta"
+                },
+                {
+                  name: "KUSHAL SUTTARAI",
+                  role: "CREATIVE LEAD",
+                  image: "/team_kushal.jpg",
+                  initials: "KS",
+                  color: "from-amber-500 to-orange-600",
+                  linkedin: "kushal-suttarai"
+                },
+                {
+                  name: "RAMIREDDY JOEL",
+                  role: "DIGITAL LEAD",
+                  image: "/team_joel.jpg",
+                  initials: "RJ",
+                  color: "from-emerald-500 to-teal-600",
+                  linkedin: "joel-ramireddy"
+                },
+                {
+                  name: "VEDULA SAI SARANVI",
+                  role: "EVENT HOST",
+                  image: "/team_saranvi.jpg",
+                  initials: "VS",
+                  color: "from-rose-500 to-purple-600",
+                  linkedin: "sai-saranvi-vedula"
+                }
+              ].map((member, idx) => (
+                <div
+                  key={idx}
+                  className="p-6 rounded-3xl border border-zinc-900 bg-zinc-950/80 shadow-lg hover:shadow-indigo-500/10 hover:border-zinc-800 transition-all duration-300 flex flex-col items-center text-center group hover:-translate-y-1"
+                >
+                  <div className={`h-20 w-20 rounded-full bg-gradient-to-br ${member.color} p-0.5 shadow-md relative overflow-hidden mb-4 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center`}>
+                    {member.image ? (
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="object-cover object-top h-full w-full rounded-full"
+                      />
+                    ) : (
+                      <div className="h-full w-full rounded-full bg-zinc-950 flex items-center justify-center font-bold text-lg text-white">
+                        {member.initials}
+                      </div>
+                    )}
+                  </div>
+                  <h3 className="text-sm font-bold text-white uppercase tracking-wide mb-1">
+                    {member.name}
+                  </h3>
+                  <span className={`inline-block px-3 py-1 rounded-full text-[9px] font-bold tracking-wider uppercase border ${
+                    member.role.includes("LEAD")
+                      ? "bg-indigo-500/20 text-indigo-300 border-indigo-500/40 shadow-[0_0_10px_rgba(99,102,241,0.2)]"
+                      : "bg-indigo-500/10 text-indigo-400 border-indigo-500/20"
+                  }`}>
+                    {member.role}
+                  </span>
+                  <a
+                    href={`https://linkedin.com/in/${member.linkedin}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 text-zinc-500 hover:text-white transition-colors text-xs font-semibold uppercase tracking-wider flex items-center gap-1.5"
+                  >
+                    <span>Connect</span>
+                    <ArrowRight className="w-3 h-3" />
+                  </a>
+                </div>
+              ))}
+            </div>
 
             <Link
               href="/team"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold uppercase text-xs tracking-widest shadow-xl shadow-indigo-500/20 hover:scale-105 active:scale-95 transition-all duration-200"
             >
-              View Full Team & Council
+              View All 24+ Council Members
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

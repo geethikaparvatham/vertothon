@@ -69,13 +69,11 @@ export default function Logo({
           </span>
           {showTagline && (
             <span className="text-[7px] font-bold uppercase tracking-wider text-zinc-500 mt-1 flex items-center gap-1">
-              <span>TRANSFORM</span>
+              <span>CODE</span>
+              <span className="text-rose-500">•</span>
+              <span className="text-indigo-400">INNOVATE</span>
               <span className="text-indigo-500">•</span>
-              <span className="text-indigo-400">ACCOUNT</span>
-              <span className="text-indigo-500">•</span>
-              <span className="text-yellow-500">INTELLIGENCE</span>
-              <span className="text-indigo-500">•</span>
-              <span className="text-rose-500">GROWTH</span>
+              <span className="text-amber-500">IMPACT</span>
             </span>
           )}
         </div>

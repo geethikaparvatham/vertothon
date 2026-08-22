@@ -59,9 +59,9 @@ export default function AboutPage() {
               Leadership
             </span>
             <h2 className="text-2xl font-bold text-white uppercase tracking-wider">Goutham Badiga</h2>
-            <span className="text-xs text-zinc-500 font-medium block mt-0.5">Founder & CEO, Vertothon</span>
+            <span className="text-xs text-zinc-500 font-medium block mt-0.5">Founder & Lead Organizer, Vertothon</span>
             <p className="text-xs sm:text-sm text-zinc-400 mt-4 leading-relaxed">
-              Vertothon is a technology-driven Predictive Financial Intelligence Platform founded by Goutham Badiga, built to help businesses automate accounting, predict financial and tax risks, detect profit leakage, monitor financial health, and make smarter, data-driven decisions.
+              Vertothon is a youth-driven technology community and premier hackathon platform founded by Goutham Badiga. It is built to empower aspiring developers, designers, and innovators to collaborate, build impactful open-source technology, and launch real-world prototypes.
             </p>
             
             {/* Social Links */}
