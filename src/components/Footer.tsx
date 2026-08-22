@@ -64,7 +64,7 @@ export default function Footer() {
               </a>
             </div>
             <p className="text-sm text-zinc-400">
-              Contact us at <span className="text-zinc-200 font-semibold">hello@vertothon.com</span>
+              Contact us at <a href="mailto:info@vertofi.com" className="text-zinc-200 font-semibold hover:text-indigo-400 transition-colors">info@vertofi.com</a>
             </p>
           </div>
         </div>

@@ -59,7 +59,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <span className="text-xs text-zinc-500 uppercase tracking-wider font-semibold block">Email Channel</span>
-                    <span className="text-sm font-medium text-zinc-300">hello@vertofi.com</span>
+                    <a href="mailto:info@vertofi.com" className="text-sm font-medium text-zinc-300 hover:text-indigo-400 transition-colors">info@vertofi.com</a>
                   </div>
                 </div>
 
@@ -69,7 +69,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <span className="text-xs text-zinc-500 uppercase tracking-wider font-semibold block">Community Base</span>
-                    <span className="text-sm font-medium text-zinc-300">Bengaluru, Karnataka, India</span>
+                    <span className="text-sm font-medium text-zinc-300">Hyderabad, Telangana, India</span>
                   </div>
                 </div>
               </div>
