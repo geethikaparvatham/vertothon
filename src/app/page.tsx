@@ -57,7 +57,7 @@ export default function VertothonHomePage() {
       phase: "Phase 01",
       title: "Registration & Team Formation",
       date: "Stay Tuned",
-      desc: "Register your team of 2-4 developers, designers, or problem solvers. Individual participants will get matched in team formation channels.",
+      desc: "Register your team of 2-5 developers, designers, or problem solvers. Individual participants will get matched in team formation channels.",
       status: "Upcoming"
     },
     {
@@ -132,7 +132,7 @@ export default function VertothonHomePage() {
     },
     {
       q: "What is the team size allowed?",
-      a: "Teams can have 2 to 4 members. If you don't have a team yet, you can register individually and form a team during our team-matching sessions on WhatsApp & Discord."
+      a: "Teams can have 2 to 5 members. If you don't have a team yet, you can register individually and form a team during our team-matching sessions on WhatsApp & Discord."
     },
     {
       q: "Can beginners participate?",
@@ -189,7 +189,7 @@ export default function VertothonHomePage() {
               </div>
               <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-900/80 border border-zinc-800 backdrop-blur-sm">
                 <Users className="w-4 h-4 text-violet-400" />
-                <span>Teams of 2 - 4</span>
+                <span>Teams of 2 - 5</span>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-900/80 border border-zinc-800 backdrop-blur-sm">
                 <Trophy className="w-4 h-4 text-amber-400" />
