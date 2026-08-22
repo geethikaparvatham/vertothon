@@ -3,120 +3,192 @@
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Compass, Lightbulb, Heart, Shield, CheckCircle } from "lucide-react";
+import { Compass, Lightbulb, Heart, Shield, Target, Eye, Sparkles, Award } from "lucide-react";
 import { Linkedin } from "@/components/SocialIcons";
 
 export default function AboutPage() {
   const values = [
     { title: "Technical Integrity", desc: "We emphasize executable, functional prototypes over generic pitch decks.", icon: <Shield className="w-5 h-5 text-indigo-400" /> },
-    { title: "Community First", desc: "No gatekeeping. We construct pathways for developers of all skill tiers.", icon: <Heart className="w-5 h-5 text-violet-400" /> },
+    { title: "Community First", desc: "No gatekeeping. We construct pathways for developers of all skill tiers.", icon: <Heart className="w-5 h-5 text-rose-400" /> },
     { title: "Real-World Focus", desc: "Solve tangible local issues, agronomy disruptions, or fintech integrations.", icon: <Compass className="w-5 h-5 text-emerald-400" /> },
     { title: "Iterative Learning", desc: "Fail fast, patch routes, rebuild structures. True builders improve incrementally.", icon: <Lightbulb className="w-5 h-5 text-amber-400" /> },
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#030303] text-zinc-100 font-sans">
+    <div className="flex flex-col min-h-screen bg-[#030303] text-zinc-100 font-sans relative overflow-hidden">
       <Header />
 
-      <main className="flex-grow py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full">
+      <main className="flex-grow py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto w-full relative z-10">
         {/* Hero title */}
-        <div className="text-center mb-16">
-          <span className="text-xs font-bold text-indigo-400 uppercase tracking-widest">About Vertothon</span>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-white mt-3 uppercase tracking-tight">
-            More than a community.<br />A platform for builders.
-          </h1>
-          <div className="h-1 w-20 bg-indigo-600 mx-auto mt-6 rounded-full" />
-        </div>
-
-        {/* Mission / Vision split */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
-          <div className="p-8 rounded-2xl bg-zinc-900/30 border border-zinc-900/80">
-            <h2 className="text-lg font-bold text-white mb-4 uppercase tracking-wider">Our Mission</h2>
-            <p className="text-sm text-zinc-400 leading-relaxed">
-              To construct a frictionless operations operating system for technology learning and execution. We organize meetups, coding cohorts, and multi-track hackathons that connect curious minds with deployable industry expertise.
-            </p>
-          </div>
-          <div className="p-8 rounded-2xl bg-zinc-900/30 border border-zinc-900/80">
-            <h2 className="text-lg font-bold text-white mb-4 uppercase tracking-wider">Our Vision</h2>
-            <p className="text-sm text-zinc-400 leading-relaxed">
-              To seed a decentralized network of active builder chapters. We see a future where tech enthusiasts, regardless of institutional pedigree, can gather, form cohorts, deploy software, and resolve socio-technical hurdles.
-            </p>
-          </div>
-        </div>
-
-        {/* Founder & CEO section */}
-        <div className="p-8 rounded-2xl bg-zinc-900/30 border border-zinc-900/80 mb-20 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden group">
-          <div className="absolute -top-40 -left-40 h-80 w-80 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none" />
-          <div className="relative h-52 w-40 rounded-2xl overflow-hidden border border-zinc-800 flex-shrink-0 shadow-2xl group-hover:border-zinc-700 transition-all duration-300">
-            <img
-              src="/goutham_badiga.jpg"
-              alt="Goutham Badiga - Founder & CEO"
-              className="object-cover object-top h-full w-full scale-100 group-hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-          <div className="flex-grow text-center md:text-left relative z-10">
-            <span className="text-[10px] text-indigo-400 font-mono tracking-widest font-semibold uppercase block mb-1">
-              Leadership
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="text-xs font-bold text-indigo-400 uppercase tracking-widest block mb-2">About Vertothon</span>
+          <h1 className="text-4xl sm:text-6xl font-black text-white uppercase tracking-tight">
+            More than a community.<br />
+            <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              A Platform For Builders.
             </span>
-            <h2 className="text-2xl font-bold text-white uppercase tracking-wider">Goutham Badiga</h2>
-            <span className="text-xs text-zinc-500 font-medium block mt-0.5">Founder & Lead Organizer, Vertothon</span>
-            <p className="text-xs sm:text-sm text-zinc-400 mt-4 leading-relaxed">
-              Vertothon is a youth-driven technology community and premier hackathon platform founded by Goutham Badiga. It is built to empower aspiring developers, designers, and innovators to collaborate, build impactful open-source technology, and launch real-world prototypes.
-            </p>
-            
-            {/* Social Links */}
-            <div className="mt-6 flex items-center justify-center md:justify-start gap-4">
-              <a
-                href="https://www.linkedin.com/in/goutham-badiga-b20760294?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-850 hover:border-zinc-800 hover:text-white text-zinc-400 text-xs font-semibold uppercase tracking-wider transition-all"
-              >
-                <Linkedin className="w-4 h-4 text-indigo-400" />
-                <span>LinkedIn</span>
-              </a>
-              <a
-                href="https://www.instagram.com/gouthambadiga?igsh=bXRwN2l1dGdqYm0y"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-850 hover:border-zinc-800 hover:text-white text-zinc-400 text-xs font-semibold uppercase tracking-wider transition-all"
-              >
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-rose-550">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-                <span>Instagram</span>
-              </a>
+          </h1>
+          <div className="w-20 h-1 bg-gradient-to-r from-indigo-500 to-violet-500 mx-auto rounded-full mt-6 mb-6" />
+          <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
+            Uniting developers, designers, and creators to foster open innovation and build tangible technology solutions.
+          </p>
+        </div>
+
+        {/* Mission / Vision split - ATTRACTIVE HIGH-TECH CARDS */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+          {/* OUR MISSION CARD */}
+          <div className="group relative rounded-3xl p-[1px] bg-gradient-to-b from-indigo-500/40 via-indigo-500/10 to-transparent shadow-xl hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-300">
+            <div className="h-full w-full rounded-3xl bg-zinc-950/80 backdrop-blur-xl p-8 sm:p-10 relative overflow-hidden flex flex-col justify-between">
+              {/* Top ambient glow blob */}
+              <div className="absolute -top-20 -left-20 w-48 h-48 bg-indigo-500/15 rounded-full blur-3xl group-hover:bg-indigo-500/25 transition-colors duration-500 pointer-events-none" />
+
+              <div>
+                {/* Header Icon + Label */}
+                <div className="flex items-center justify-between mb-6">
+                  <div className="p-3.5 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 shadow-[0_0_20px_rgba(99,102,241,0.2)]">
+                    <Target className="w-6 h-6" />
+                  </div>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-indigo-400 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20">
+                    Core Purpose
+                  </span>
+                </div>
+
+                <h2 className="text-2xl font-black text-white uppercase tracking-wider mb-4 flex items-center gap-2">
+                  <span>Our Mission</span>
+                </h2>
+
+                <p className="text-sm sm:text-base text-zinc-300 leading-relaxed font-light">
+                  To construct a frictionless operations operating system for technology learning and execution. We organize meetups, coding cohorts, and multi-track hackathons that connect curious minds with deployable industry expertise.
+                </p>
+              </div>
+
+              {/* Bottom decorative bar */}
+              <div className="mt-8 pt-6 border-t border-zinc-900/80 flex items-center justify-between text-xs text-zinc-500">
+                <span className="flex items-center gap-2 text-indigo-400 font-medium">
+                  <Sparkles className="w-3.5 h-3.5" /> Action Driven
+                </span>
+                <span className="font-mono text-[10px] text-zinc-600 uppercase tracking-widest">Vertothon Protocol</span>
+              </div>
+            </div>
+          </div>
+
+          {/* OUR VISION CARD */}
+          <div className="group relative rounded-3xl p-[1px] bg-gradient-to-b from-purple-500/40 via-purple-500/10 to-transparent shadow-xl hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300">
+            <div className="h-full w-full rounded-3xl bg-zinc-950/80 backdrop-blur-xl p-8 sm:p-10 relative overflow-hidden flex flex-col justify-between">
+              {/* Top ambient glow blob */}
+              <div className="absolute -top-20 -right-20 w-48 h-48 bg-purple-500/15 rounded-full blur-3xl group-hover:bg-purple-500/25 transition-colors duration-500 pointer-events-none" />
+
+              <div>
+                {/* Header Icon + Label */}
+                <div className="flex items-center justify-between mb-6">
+                  <div className="p-3.5 rounded-2xl bg-purple-500/10 border border-purple-500/30 text-purple-400 shadow-[0_0_20px_rgba(168,85,247,0.2)]">
+                    <Eye className="w-6 h-6" />
+                  </div>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-purple-400 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20">
+                    Future Horizon
+                  </span>
+                </div>
+
+                <h2 className="text-2xl font-black text-white uppercase tracking-wider mb-4 flex items-center gap-2">
+                  <span>Our Vision</span>
+                </h2>
+
+                <p className="text-sm sm:text-base text-zinc-300 leading-relaxed font-light">
+                  To seed a decentralized network of active builder chapters. We see a future where tech enthusiasts, regardless of institutional pedigree, can gather, form cohorts, deploy software, and resolve socio-technical hurdles.
+                </p>
+              </div>
+
+              {/* Bottom decorative bar */}
+              <div className="mt-8 pt-6 border-t border-zinc-900/80 flex items-center justify-between text-xs text-zinc-500">
+                <span className="flex items-center gap-2 text-purple-400 font-medium">
+                  <Award className="w-3.5 h-3.5" /> Long-Term Impact
+                </span>
+                <span className="font-mono text-[10px] text-zinc-600 uppercase tracking-widest">Global Ecosystem</span>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Values section */}
+        {/* Founder & CEO Section */}
+        <div className="relative rounded-3xl p-[1px] bg-gradient-to-r from-indigo-500/30 via-violet-500/20 to-pink-500/30 mb-20 shadow-2xl overflow-hidden group">
+          <div className="rounded-3xl bg-zinc-950/90 backdrop-blur-xl p-8 sm:p-10 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
+            <div className="absolute -top-40 -left-40 h-80 w-80 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
+            
+            <div className="relative h-56 w-44 rounded-2xl overflow-hidden border-2 border-indigo-500/30 flex-shrink-0 shadow-2xl shadow-indigo-500/20 group-hover:border-indigo-500/60 transition-all duration-300">
+              <img
+                src="/goutham_badiga.jpg"
+                alt="Goutham Badiga - Founder & CEO"
+                className="object-cover object-top h-full w-full scale-100 group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <div className="flex-grow text-center md:text-left relative z-10">
+              <span className="text-[11px] text-indigo-400 font-mono tracking-widest font-bold uppercase block mb-1">
+                Leadership & Visionary
+              </span>
+              <h2 className="text-3xl font-black text-white uppercase tracking-wider">Goutham Badiga</h2>
+              <span className="text-xs text-zinc-400 font-semibold block mt-1 uppercase tracking-wider">
+                Founder & Lead Organizer, Vertothon
+              </span>
+              <p className="text-xs sm:text-sm text-zinc-300 mt-4 leading-relaxed font-light">
+                Vertothon is a youth-driven technology community and premier hackathon platform founded by Goutham Badiga. It is built to empower aspiring developers, designers, and innovators to collaborate, build impactful open-source technology, and launch real-world prototypes.
+              </p>
+              
+              {/* Social Links */}
+              <div className="mt-6 flex items-center justify-center md:justify-start gap-4">
+                <a
+                  href="https://www.linkedin.com/in/goutham-badiga-b20760294?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-500/30 hover:border-indigo-500/50 text-indigo-300 text-xs font-bold uppercase tracking-wider transition-all shadow-md shadow-indigo-500/10"
+                >
+                  <Linkedin className="w-4 h-4 text-indigo-400" />
+                  <span>LinkedIn</span>
+                </a>
+                <a
+                  href="https://www.instagram.com/gouthambadiga?igsh=bXRwN2l1dGdqYm0y"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-pink-500/10 hover:bg-pink-500/20 border border-pink-500/30 hover:border-pink-500/50 text-pink-300 text-xs font-bold uppercase tracking-wider transition-all shadow-md shadow-pink-500/10"
+                >
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-pink-400">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                  <span>Instagram</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Core Tenets section */}
         <div className="mb-20">
-          <h3 className="text-2xl font-bold text-white mb-8 text-center uppercase tracking-wider">Our Core Tenets</h3>
+          <h3 className="text-2xl font-black text-white mb-8 text-center uppercase tracking-wider">Our Core Tenets</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {values.map((v, idx) => (
-              <div key={idx} className="flex gap-4 p-6 rounded-2xl border border-zinc-900 bg-zinc-950/40">
-                <div className="flex-shrink-0 p-3 h-11 w-11 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center">
+              <div key={idx} className="flex gap-4 p-6 rounded-2xl border border-zinc-900 bg-zinc-950/70 hover:border-zinc-800 transition-all duration-300">
+                <div className="flex-shrink-0 p-3 h-12 w-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center shadow-md">
                   {v.icon}
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-white mb-1">{v.title}</h4>
-                  <p className="text-xs text-zinc-400 leading-relaxed">{v.desc}</p>
+                  <h4 className="text-sm font-bold text-white mb-1 uppercase tracking-wider">{v.title}</h4>
+                  <p className="text-xs text-zinc-400 leading-relaxed font-light">{v.desc}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Philosophy grid */}
-        <div className="p-8 rounded-3xl bg-gradient-to-r from-indigo-900/10 via-violet-900/10 to-fuchsia-900/10 border border-indigo-500/10 text-center flex flex-col items-center">
-          <h3 className="text-xl font-extrabold text-white mb-2 uppercase tracking-wide">Brand Philosophy</h3>
-          <span className="text-xs font-mono text-indigo-400 font-semibold tracking-widest uppercase mb-4">
+        {/* Brand Philosophy Banner */}
+        <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-indigo-950/40 via-purple-950/40 to-pink-950/40 border border-indigo-500/20 text-center flex flex-col items-center shadow-2xl relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-500/10 via-transparent to-transparent pointer-events-none" />
+          <h3 className="text-2xl font-black text-white mb-2 uppercase tracking-wide relative z-10">Brand Philosophy</h3>
+          <span className="text-xs font-mono text-indigo-400 font-bold tracking-widest uppercase mb-4 relative z-10">
             BUILD. CONNECT. CREATE. IMPACT.
           </span>
-          <p className="text-sm text-zinc-400 max-w-xl leading-relaxed">
+          <p className="text-sm text-zinc-300 max-w-2xl leading-relaxed font-light relative z-10">
             We don't do simple pitch contests. We value clean code syntax, working telemetry dashboards, robust API integrations, and practical application layouts. If you share this engineering spirit, welcome home.
           </p>
         </div>
