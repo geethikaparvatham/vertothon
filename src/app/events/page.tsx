@@ -28,9 +28,25 @@ export default function EventsDiscoveryPage() {
             </div>
 
             {/* Registrations are opening soon message banner underneath */}
-            <div className="mt-6 w-full p-4 sm:p-5 rounded-2xl border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-xs sm:text-sm font-semibold tracking-wide uppercase text-center animate-pulse-glow flex items-center justify-center gap-2.5 shadow-lg shadow-indigo-500/5">
-              <Bell className="w-4 h-4 text-indigo-400 animate-bounce" />
-              <span>Registrations are opening soon...</span>
+            <div className="mt-6 w-full relative rounded-2xl p-[1px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-xl shadow-indigo-500/20 group">
+              <div className="w-full px-5 py-4 rounded-2xl bg-zinc-950/90 backdrop-blur-xl border border-indigo-500/30 flex items-center justify-center gap-3 text-center relative overflow-hidden">
+                {/* Background ambient glow */}
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 opacity-70 animate-pulse pointer-events-none" />
+
+                {/* Live pulsing green status indicator */}
+                <span className="relative flex h-2.5 w-2.5 flex-shrink-0">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                </span>
+
+                <div className="p-1.5 rounded-lg bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 shadow-[0_0_12px_rgba(99,102,241,0.4)] flex-shrink-0">
+                  <Bell className="w-4 h-4 text-indigo-300 animate-bounce" />
+                </div>
+
+                <span className="text-xs sm:text-sm font-extrabold tracking-wider uppercase text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">
+                  Registrations Are Opening Soon...
+                </span>
+              </div>
             </div>
           </div>
 
