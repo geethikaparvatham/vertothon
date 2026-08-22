@@ -157,9 +157,9 @@ export default function VertothonHomePage() {
 
           <div className="max-w-5xl mx-auto text-center flex flex-col items-center relative z-10">
             {/* Top Announcement Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-indigo-500/40 bg-indigo-500/10 text-indigo-300 text-xs sm:text-sm font-semibold tracking-wider uppercase mb-8 shadow-lg shadow-indigo-500/10 animate-pulse-glow">
-              <Sparkles className="w-4 h-4 text-indigo-400" />
-              <span>The Flagship Student & Builder Hackathon</span>
+            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-indigo-400/60 bg-indigo-950/60 text-white text-xs sm:text-sm font-bold tracking-wider uppercase mb-8 shadow-xl shadow-indigo-500/20 backdrop-blur-md">
+              <Sparkles className="w-4 h-4 text-yellow-400 animate-pulse" />
+              <span className="text-white drop-shadow-sm">The Flagship Student & Builder Hackathon</span>
             </div>
 
             {/* Main Big Title */}
