@@ -172,13 +172,12 @@ export default function AboutPage() {
         </div>
 
         {/* Brand Philosophy Banner */}
-        <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-indigo-950/40 via-purple-950/40 to-pink-950/40 border border-indigo-500/20 text-center flex flex-col items-center shadow-2xl relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-500/10 via-transparent to-transparent pointer-events-none" />
-          <h3 className="text-2xl font-black text-white mb-2 uppercase tracking-wide relative z-10">Brand Philosophy</h3>
-          <span className="text-xs font-mono text-indigo-400 font-bold tracking-widest uppercase mb-4 relative z-10">
+        <div className="p-8 sm:p-12 rounded-3xl bg-zinc-950/80 border border-zinc-800 text-center flex flex-col items-center shadow-xl">
+          <h3 className="text-2xl font-bold text-white mb-2 uppercase tracking-wide">Brand Philosophy</h3>
+          <span className="text-xs font-mono text-zinc-400 font-bold tracking-widest uppercase mb-4">
             BUILD. CONNECT. CREATE. IMPACT.
           </span>
-          <p className="text-sm text-zinc-300 max-w-2xl leading-relaxed font-light relative z-10">
+          <p className="text-sm text-zinc-300 max-w-2xl leading-relaxed font-light">
             We don't do simple pitch contests. We value clean code syntax, working telemetry dashboards, robust API integrations, and practical application layouts. If you share this engineering spirit, welcome home.
           </p>
         </div>
