@@ -8,8 +8,24 @@ import NetworkBackground from "@/components/NetworkBackground";
 import { Github, Linkedin, Instagram } from "@/components/SocialIcons";
 import { Sparkles, Shield } from "lucide-react";
 
+interface TeamMember {
+  name: string;
+  role: string;
+  initials: string;
+  image?: string;
+  color: string;
+  glow?: string;
+  bio: string;
+  links: {
+    linkedin?: string;
+    github?: string;
+    twitter?: string;
+    instagram?: string;
+  };
+}
+
 export default function TeamPage() {
-  const teamMembers = [
+  const teamMembers: TeamMember[] = [
     {
       name: "ISSAKU TAGARAMPUDI",
       role: "TEAM LEAD",
