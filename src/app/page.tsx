@@ -326,7 +326,7 @@ export default function VertothonHomePage() {
               <span className="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-3 block">
                 Be Part of Something Big
               </span>
-              <h2 className="text-4xl sm:text-6xl font-black text-white uppercase tracking-tight mb-4">
+              <h2 className="text-2xl sm:text-4xl font-extrabold text-white uppercase tracking-tight mb-4">
                 Ready to Hack at Vertothon?
               </h2>
               <p className="text-zinc-400 text-sm sm:text-base max-w-xl mb-10 leading-relaxed">
