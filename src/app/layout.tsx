@@ -18,6 +18,8 @@ export const metadata: Metadata = {
   description: "Vertothon is a technology-driven community empowering students, developers, creators, and innovators through hackathons, workshops, meetups, bootcamps, and real-world opportunities.",
 };
 
+import NetworkBackground from "@/components/NetworkBackground";
+
 export default function RootLayout({
   children,
 }: {
@@ -29,9 +31,12 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
       style={{ colorScheme: "dark" }}
     >
-      <body className="min-h-full flex flex-col bg-[#030303] text-[#f4f4f5] antialiased">
+      <body className="min-h-full flex flex-col bg-[#030303] text-[#f4f4f5] antialiased relative">
         <StateProvider>
-          {children}
+          <NetworkBackground />
+          <div className="relative z-10 flex flex-col min-h-screen">
+            {children}
+          </div>
         </StateProvider>
       </body>
     </html>

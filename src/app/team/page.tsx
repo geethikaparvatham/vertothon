@@ -347,7 +347,6 @@ export default function TeamPage() {
   return (
     <div className="flex flex-col min-h-screen bg-[#030303] text-zinc-100 font-sans relative overflow-hidden">
       <Header />
-      <NetworkBackground />
 
       <main className="flex-grow py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full relative z-10">
         {/* Header Title */}

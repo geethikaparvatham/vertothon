@@ -12,7 +12,6 @@ export default function EventsDiscoveryPage() {
   return (
     <div className="flex flex-col min-h-screen bg-[#030303] text-zinc-100 font-sans relative overflow-hidden">
       <Header />
-      <NetworkBackground />
 
       <main className="flex-grow py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center relative z-10">
         <div className="w-full max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-center gap-12 lg:gap-20">

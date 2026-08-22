@@ -117,7 +117,6 @@ export default function VertothonHomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-[#030303] text-zinc-100 font-sans relative overflow-x-hidden selection:bg-indigo-500 selection:text-white">
       <Header />
-      <NetworkBackground />
 
       <main className="relative z-10 flex-grow">
         
