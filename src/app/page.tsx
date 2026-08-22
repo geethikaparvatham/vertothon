@@ -221,10 +221,6 @@ export default function VertothonHomePage() {
                       {track.desc}
                     </p>
                   </div>
-                  <div className="mt-6 pt-4 border-t border-zinc-900/60 flex items-center text-xs font-semibold text-indigo-400 gap-1 group-hover:gap-2 transition-all">
-                    <span>Open Track</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </div>
                 </div>
               ))}
             </div>
