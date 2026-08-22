@@ -64,7 +64,7 @@ export default function Logo({
       {/* Typography */}
       {showText && (
         <div className={`flex flex-col font-sans leading-none ${lightTheme ? "text-zinc-950" : "text-white"}`}>
-          <span className="text-lg font-bold tracking-[0.18em] uppercase font-sans">
+          <span className="text-xl sm:text-2xl font-black tracking-[0.2em] uppercase font-sans">
             VERTOTHON
           </span>
           {showTagline && (

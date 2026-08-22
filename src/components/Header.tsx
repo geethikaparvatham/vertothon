@@ -58,8 +58,8 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl h-16 items-center px-4 sm:px-6 lg:px-8">
         {/* Logo - Left */}
         <div className="flex items-center flex-shrink-0">
-          <Link href="/" className="flex items-center gap-2 group scale-110 transform origin-left transition-transform hover:scale-125">
-            <Logo showText={true} showTagline={false} size={40} />
+          <Link href="/" className="flex items-center gap-2 group transform origin-left transition-transform hover:scale-105">
+            <Logo showText={true} showTagline={false} size={46} />
           </Link>
         </div>
 
